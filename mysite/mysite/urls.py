@@ -20,7 +20,10 @@ from django.conf.urls import url
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include ('firstwebpage.urls')),
     path('articles/', views.archive, name='archive'),
-    url(r'^articles/(?P<article_id>\d+)$', views.get_article, name='get_article')
+    url(r'^articles/(?P<article_id>\d+)$', views.get_article, name='get_article'),
+    path('articles/new', views.create_post, name='Create_Post'),
+    path('', views.registration, name='registration'),
+    path('login/', views.auth, name='auth'),
+    path('logout', views.deauth, name='deauth')
 ]
