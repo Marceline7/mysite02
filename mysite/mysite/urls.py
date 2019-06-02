@@ -22,5 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include ('firstwebpage.urls')),
     path('articles/', views.archive, name='archive'),
-    url(r'^articles2/(?P<article_id>\d+)$', views.get_article, name='get_article')
+    url(r'^articles/(?P<article_id>\d+)$', views.get_article, name='get_article')
 ]

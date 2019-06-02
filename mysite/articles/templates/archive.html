@@ -6,12 +6,12 @@
 </head>
 <body>
 <div class="header">
-    <img src="{{ STATIC_URL }}img/dpb-logo.png"/>
+    <img src="{{ STATIC_URL }}img/static/marcy.jpg"/>
 </div>
 <div class="archive">
     {% for post in posts %}
     <div class="one-post">
-        <h2 class="post-title">{{ post.title }}</h2>
+        <a href="/articles/{{post.id}}"><h2 class="post-title">{{ post.title }}</h2></a>
         <div class="article-info">
             <div class="article-author">{{ post.author.username }}</div>
             <div class="article-created-date">{{ post.created_date }}</div>
